@@ -1,0 +1,14 @@
+.login-btn{
+    text-align: center;
+}
+.btn{
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-div{
+    margin-top: 150px;
+}
+.error{
+    color: red;
+}
+	

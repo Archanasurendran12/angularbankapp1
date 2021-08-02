@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 style="margin-left: 360px; margin-top: 50px;">{{aim}}</h1>
+    <div class="login-div">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style=" background-color: white; border: 2px solid black;;">
+                <h2 style="text-align: center; color: rgb(66, 85, 85);">Login</h2>
+                <form [formGroup]=loginForm (ngSubmit)="login()">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"name="acno" id="acno" formControlName="acno" placeholder="Account Number"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+                <div *ngIf="(this.loginForm.get('acno')?.touched || this.loginForm.get('acno')?.dirty)&& this.loginForm.get('acno')?.errors" class="error">invalid account number</div><br>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="pswd" id="pwd" formControlName="pswd"  placeholder="password"
+                        aria-label="password" aria-describedby="basic-addon2">
+                </div>
+                <div *ngIf="(this.loginForm.get('pswd')?.touched || this.loginForm.get('pswd')?.dirty)&& this.loginForm.get('pswd')?.errors" class="error">invalid password</div><br>
+                <div class="input-group mb-3">
+                    <p style="color: red;" id="error"></p>
+                </div>
+                <div class="input-group mb-3 login-btn-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a routerLink="register">Sign UP</a>
+                </div>
+            </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+	
+	
+	
